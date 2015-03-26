@@ -1,0 +1,272 @@
+import javax.swing.JOptionPane;
+
+public class assnthree{
+
+public static void main(String[] args) {
+
+String user, pass, user1, pass1;
+
+final int LIMIT = 3;
+
+int count = 0;
+
+user = JOptionPane.showInputDialog("Enter your Username");
+
+pass = JOptionPane.showInputDialog("Enter your password");
+
+while (count < LIMIT) {
+
+user1 = JOptionPane.showInputDialog("Enter your Username");
+
+if (user.equals(user1)) {
+
+JOptionPane.showMessageDialog(null,
+
+"Correct, Enter your Password ");
+
+break;
+
+}
+
+else {
+
+JOptionPane.showMessageDialog(null,
+
+"Incorrect User!! please try again");
+
+count++;
+
+}
+
+}
+
+while (count < LIMIT) {
+
+pass1 = JOptionPane.showInputDialog("Enter your password");
+
+if (pass.equals(pass1)) {
+
+JOptionPane.showMessageDialog(null, "Welcome " + user);
+
+break;
+
+}
+
+else {
+
+JOptionPane.showMessageDialog(null,
+
+"Incorrect User!! please try again");
+
+count++;
+
+}
+
+}
+
+if (count >= LIMIT) {
+
+JOptionPane.showMessageDialog(null, "Please contact admin");
+
+System.exit(0);}
+
+
+
+String[] choices = { "Admin", "Student", "Staff" };
+
+String input = (String) JOptionPane.showInputDialog(null,
+
+"Choose account type...", "Account Type",
+
+JOptionPane.QUESTION_MESSAGE, null, choices, choices[1]);
+
+switch (input) {
+
+case "Admin":
+
+	while (count < LIMIT) {
+
+	user1 = JOptionPane.showInputDialog("Enter your Username");
+
+	if (user.equals(user1)) {
+
+	JOptionPane.showMessageDialog(null,
+
+	"Correct, Enter your Password ");
+
+	break;
+
+	}
+
+
+
+	else {
+
+	JOptionPane.showMessageDialog(null,
+
+	"Incorrect User!! please try again");
+
+	count++;
+
+}
+
+}
+
+
+
+while (count < LIMIT) {
+
+pass1 = JOptionPane.showInputDialog("Enter your password");
+
+if (pass.equals(pass1)) {
+
+JOptionPane.showMessageDialog(null,
+
+"Welcome Admin you can update and read files "
+
++ user);
+
+break;
+
+}
+
+
+
+	else {
+
+JOptionPane.showMessageDialog(null,
+
+"Incorrect User!! please try again");
+
+count++;
+
+}
+
+JOptionPane.showMessageDialog(null, "Please contact admin");
+
+}
+
+
+	}
+
+
+
+switch (input) {
+
+case "Student":
+
+while (count < LIMIT) {
+
+user1 = JOptionPane.showInputDialog("Enter your Username");
+
+if (user.equals(user1)) {
+
+JOptionPane.showMessageDialog(null,
+
+"Correct, Enter your Password ");
+
+break;
+
+}
+
+else {
+
+JOptionPane.showMessageDialog(null,
+
+"Incorrect User!! please try again");
+
+count++;
+
+}
+
+}
+
+while (count < LIMIT) {
+
+pass1 = JOptionPane.showInputDialog("Enter your password");
+
+if (pass.equals(pass1)) {
+
+JOptionPane.showMessageDialog(null,
+
+"Welcome Student, you can only read files " + user);
+
+break;
+
+}
+else {
+
+JOptionPane.showMessageDialog(null,
+
+"Incorrect User!! please try again");
+
+count++;
+
+}
+
+JOptionPane.showMessageDialog(null, "Please contact admin");
+
+}
+
+}
+
+switch (input) {
+
+case "Staff":
+
+while (count < LIMIT) {
+
+user1 = JOptionPane.showInputDialog("Enter your Username");
+
+if (user.equals(user1)) {
+
+	JOptionPane.showMessageDialog(null,
+	"Correct, Enter your Password ");
+
+	break;
+
+}
+
+else {
+
+JOptionPane.showMessageDialog(null,
+
+"Incorrect User!! please try again");
+
+count++;
+
+}
+
+}
+
+while (count < LIMIT) {
+
+	pass1 = JOptionPane.showInputDialog("Enter your password");
+
+if (pass.equals(pass1)) {
+
+JOptionPane.showMessageDialog(null,
+
+"Welcome Staff you can update, read, add, delete files "
+
++ user);
+
+break;
+}
+
+else {
+
+JOptionPane.showMessageDialog(null,
+"Incorrect User!! please try again");
+
+count++;
+
+}
+
+JOptionPane.showMessageDialog(null, "Please contact admin");
+}
+}
+
+}
+
+}
